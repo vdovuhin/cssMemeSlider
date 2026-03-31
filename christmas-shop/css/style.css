@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* Підключення фрифтів */
+/* Google Fonts (Plugin) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura:wght@400&display=swap");
+/* Локальне підключення шрифтів */
+/* Скидання стилів */
+@import url("reset.css");
+/* Скидання змінних */
+@import url("variables.scss");
+/* Основні стилі */
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 148%;
+  color: var(--dark);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip; /* clip */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+/* --------------------- */
+[class*=__container] {
+  max-width: 1306px;
+  padding-inline: 15px;
+  margin: 0 auto;
+}
+
+/* --------------------- */
+/* Стилі для header */
+/* Стилі для main */
+.page {
+  background-color: var(--neutral-300);
+}
+
+/* Стилі для footer */
+/* БЕМ елементі @import */
