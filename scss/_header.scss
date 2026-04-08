@@ -1,9 +1,6 @@
-// @media (max-width: toRem(992)){
-// 	@import "component/menu.scss";
-// }
-
 .header {
 	padding-block: 0.75rem;
+	position: relative;
 	// .header__container
 	&__container {
 		display: flex;
@@ -11,13 +8,15 @@
 		justify-content: space-between;
 		column-gap: 0.75rem;
 		flex-wrap: wrap;
-
+		
 	}
 	// .header__logo
 	&__logo {
 		border-radius: 0.75rem;
 		padding: 0.5rem 1.25rem;
 		flex-shrink: 1;
+		position: relative;
+		z-index: 11;
 	}
 	// .header__logo-link
 	&__logo-link {
@@ -46,7 +45,8 @@
 	}
 	// .header__menu
 	&__menu {
-		
+		display: flex;
+		align-items: center
 	}
 }
-
+@import "component/menu.scss";
