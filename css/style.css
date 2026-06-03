@@ -2,7 +2,7 @@
 /* Підключення фрифтів */
 /* Google Fonts (Plugin) */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Allura:wght@400&display=swap");
+
 /* Локальне підключення шрифтів */
 /* Скидання стилів */
 @import url("reset.css");
@@ -12,7 +12,7 @@
 
 /* Основні стилі */
 body {
-	font-family: Arial, sans-serif;
+	font-family: Montserrat, sans-serif;
 	background-color: #f0f0f0;
 	min-height: 100vh;
 }
@@ -60,14 +60,13 @@ body {
 	justify-content: center;
 	/* width: 50%; */
 	
-}	git status
+}	
 .input {
 	display: none;
 }
 .page__items {
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-columns: 1fr;
+	grid-template-columns: 1fr;	
 	overflow: hidden; 
 	border-radius: 0.5rem;
 }
@@ -76,9 +75,12 @@ body {
   opacity: 0;               /* По умолчанию скрыты */
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   transform: scale(0.95);
+	width: 100%;
 }
 .image {
-	margin: 0 auto;
+	margin: 0 auto; 
+	width: 100%;
+	aspect-ratio: 324/313; 
 	width: 50%;
   height: auto;
   display: block;
@@ -98,6 +100,7 @@ body {
   text-align: center;
   font-size: 1.2rem;
   transition: opacity 0.3s ease-in-out;
+	font-weight: 600;
 }
 .inner__text--1 {
 }
@@ -122,11 +125,22 @@ body {
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  
-  /* Увеличиваем область клика по ТЗ, не меняя визуальный размер */
   border: 0.5rem solid transparent;
   background-clip: padding-box;
 }
+.button:hover {
+	background-color: #887d7d;
+	transform: scale(1.2);
+}
+#slide-1:checked ~ .buttons .button:nth-child(1),
+#slide-2:checked ~ .buttons .button:nth-child(2),
+#slide-3:checked ~ .buttons .button:nth-child(3),
+#slide-4:checked ~ .buttons .button:nth-child(4) {
+  background-color: #d5b6b6;
+	transform: scale(1.2);
+}
+
+
 .button--1 {
 }
 .button--2 {
